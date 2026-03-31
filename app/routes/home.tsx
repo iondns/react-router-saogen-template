@@ -1,17 +1,14 @@
-import type { Route } from "./+types/home";
-import { Welcome } from "../welcome/welcome";
-
-export function meta({}: Route.MetaArgs) {
-	return [
-		{ title: "SAOGEN" },
-		{ name: "description", content: "Welcome to React Router!" },
-	];
-}
-
-export function loader({ context }: Route.LoaderArgs) {
-	return { message: context.cloudflare.env.VALUE_FROM_CLOUDFLARE };
-}
-
-export default function Home({ loaderData }: Route.ComponentProps) {
-	return <Welcome message={loaderData.message} />;
+export default function Home() {
+  return (
+    <main className="home">
+      <section className="hero">
+        <h1>SAOGEN</h1>
+        <p>Symbiotic Autonomous Organization built on the QOGE blockchain.</p>
+        <p>
+          Hyper-optimization, shared intellectual property, and long-term
+          posthuman infrastructure.
+        </p>
+      </section>
+    </main>
+  );
 }
