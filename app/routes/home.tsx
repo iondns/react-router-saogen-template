@@ -1,20 +1,18 @@
 
-export default function Home() {
-  return (
-    <main className="home">
-      <section className="hero" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', minHeight: '80vh' }}>
-        <img
-          src="https://raw.githubusercontent.com/QOGE/SAOGEN/main/files/images/saogen-logo.png"
-          alt="SAOGEN Logo"
-          style={{ width: 160, height: 160, marginBottom: 24 }}
-        />
-      
-        <p>Symbiotic Autonomous Organization built on the QOGE blockchain.</p>
-        <p>
-          Hyper-optimization, shared intellectual property, and long-term
-          posthuman infrastructure.
-        </p>
-      </section>
-    </main>
-  );
+import type { Route } from "./+types/home";
+import { Welcome } from "../welcome/welcome";
+
+export function meta({}: Route.MetaArgs) {
+	return [
+		{ title: "SAOGEN" },
+		{ name: "description", content: "Welcome to React Router!" },
+	];
+}
+
+export function loader({ context }: Route.LoaderArgs) {
+	return { message: context.cloudflare.env.VALUE_FROM_CLOUDFLARE };
+}
+
+export default function Home({ loaderData }: Route.ComponentProps) {
+	return <Welcome message={loaderData.message} />;
 }
