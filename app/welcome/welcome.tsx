@@ -49,38 +49,21 @@ export function Welcome({ message }: { message: string }) {
 }
 
 const resources = [
-	{
-		href: "https://github.com/QOGE/SAOGEN",
-		text: "SAOGEN Docs",
-		icon: (
-			<svg
-				xmlns="http://www.w3.org/2000/svg"
-				width="24"
-				height="20"
-				viewBox="0 0 20 20"
-				fill="none"
-				className="stroke-gray-600 group-hover:stroke-current dark:stroke-gray-300"
-			>
-				<path
-					d="M9.99981 10.0751V9.99992M17.4688 17.4688C15.889 19.0485 11.2645 16.9853 7.13958 12.8604C3.01467 8.73546 0.951405 4.11091 2.53116 2.53116C4.11091 0.951405 8.73546 3.01467 12.8604 7.13958C16[...]"
-					strokeWidth="1.5"
-					strokeLinecap="round"
-				/>
-			</svg>
-		),
-	},
-	{
-		href: "https://discord.gg/dcEMCcbct",
-		text: "SAOGEN Discord",
-		icon: (
-			<svg
-				xmlns="http://www.w3.org/2000/svg"
-				width="24"
-				height="20"
-				viewBox="0 0 24 20"
-				fill="none"
-				className="stroke-gray-600 group-hover:stroke-current dark:stroke-gray-300"
-			>
-				<path
-					d="M15.0686 1.25995L14.5477 1.17423L14.2913 1.63578C14.
-
+    {
+        title: 'SAOGEN Docs',
+        url: 'https://saogen.docs.com',
+        icon: '<svg>...</svg>' // Example SVG icon
+    },
+    {
+        title: 'SAOGEN Discord',
+        url: 'https://discord.gg/saogen',
+        icon: '<svg>...</svg>' // Example SVG icon
+    },
+    {
+        title: 'Explore SAS',
+        url: 'https://placeholder.url', // Placeholder URL for SAS
+        icon: '<svg>...</svg>' // Example SVG icon
+    }
+];
+
+export default resources;
