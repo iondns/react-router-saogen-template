@@ -55,7 +55,7 @@ export function Welcome({ message }: { message: string }) {
 
 const resources = [
 	{
-		href: "https://discord.gg/dcEMCcbct",
+		href: "https://discord.com/channels/1429693001617117256/1429693003299164214",
 		text: "SAO Membership",
 		
 	},
